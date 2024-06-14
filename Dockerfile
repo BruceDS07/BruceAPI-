@@ -1,8 +1,8 @@
-FROM node:16.13.0
+FROM node:lts-buster
 
 RUN apt-get update
 RUN apt-get upgrade -y
-RUN apt-get install nodejs -y
+RUN apt-get install nodejs ffmpeg imagemagick webp -y
 
 WORKDIR /app
 COPY . /app
