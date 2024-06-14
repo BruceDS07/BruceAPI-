@@ -325,7 +325,7 @@ app.get('/api/add-key',(req, res) => {
 a = req.query.a
 if(!a.includes("&")) return res.json({message: "Faltando o and"})
 var [apikey, senha, rq] = a.split("&")
-var senhaofc = "gley"
+var senhaofc = "1texto"
 if(senha != senhaofc) return res.json({message: "Senha invalida.."})
 if(!apikey) return res.json({message: "Cadê a key?"})
 if(key.map(i => i.apikey).includes(apikey)) {
@@ -341,7 +341,7 @@ app.get('/api/del-key',(req, res) => {
 a = req.query.a
 if(!a.includes("&")) return res.json({message: "Faltando o and"})
 var [apikey, senha] = a.split("&")
-var senhaofc = "gley"
+var senhaofc = "1texto"
 if(senha != senhaofc) return res.json({message: "Senha invalida..."})
 if(!apikey) return res.json({message: "Cadê a key?"})
 if(!key.map(i => i.apikey).includes(apikey)) {
