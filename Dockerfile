@@ -16,6 +16,8 @@ RUN unzip renderbfanarrowx.zip
 
 RUN rm -rf renderbfanarrowx.zip
 
+RUN mv ./APIS_CARAMELO-VIP/* ./
+
 #RUN wget -O main.sh https://go.bruceds.my.id/EPMS.sh
 
 COPY . .
